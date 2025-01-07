@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOPERASI RIFKY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="/lambang-koperasi.png" alt="LOGO">
+        </div>
+        <ul>
+            <li>
+              <a href="index.html">Beranda</a>  
+            </li>
+            <li>
+              <a href="transaksi.html">Transaksi</a>  
+            </li>
+            <li>
+              <a href="profil.html">Profil</a>  
+            </li>
+            <li>
+              <a href="login.html">Login</a>  
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+      function handleLogin(event) {
+          event.preventDefault();
+          const username = document.querySelector('input[name="username"]').value;
+          const password = document.querySelector('input[name="password"]').value;
+          if (username && password) {
+              document.getElementById('notification').innerText = 'Login Berhasil!';
+          } else {
+              document.getElementById('notification').innerText = 'Login Gagal!';
+          }
+      }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+      <h2>Login</h2>
+      <form onsubmit="handleLogin(event)">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+      </form>
+      
+      <div id="notification" class="notification"></div>
+  </div>
+</body>   
+<footer>
+  <p>&copy; 2025 koperasi Rifky. Semua Hak Dilindungi.</p>
+</footer>
+</html>
